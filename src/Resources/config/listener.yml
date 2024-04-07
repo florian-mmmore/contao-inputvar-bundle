@@ -1,0 +1,8 @@
+services:
+    input_var.listener.insert_tags:
+        class: Dreibein\InputvarBundle\EventListener\InsertTagsListener
+        arguments:
+            - "@contao.framework"
+        public: true
+        tags:
+              - { name: contao.hook, hook: replaceInsertTags }
